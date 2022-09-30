@@ -47,7 +47,7 @@ class _DiagnosisState extends State<Diagnosis> {
                 child: MaterialButton(
                     onPressed: (() {
                       userProblem = _textController.text;
-                      Navigator.pushNamed(context, '/location');
+                      Navigator.pushNamed(context, '/search');
                     }),
                     color: Colors.grey,
                     child: const Text('Submit')))

@@ -1,17 +1,16 @@
 //dummy file to represent where to route after the problem is entered
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
 
-class Location extends StatefulWidget {
-  const Location({super.key});
+//class Search extends StatefulWidget {
+  //const Search({super.key});
 
-  @override
-  State<Location> createState() => _LocationState();
-}
+  //@override
+  //State<Search> createState() => _SearchState();
+//}
 
-class _LocationState extends State<Location> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-        body: SafeArea(child: Text('choosing location of user')));
-  }
-}
+//class _SearchState extends State<Search> {
+  //@override
+  //Widget build(BuildContext context) {
+    //return MaterialApp(home: Search());
+  //}
+//}
