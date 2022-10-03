@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spanner/pages/diagnosis.dart';
-import 'package:spanner/pages/location.dart';
+import 'package:spanner/pages/search.dart';
 
 void main() {
   runApp(
@@ -8,7 +8,7 @@ void main() {
       initialRoute: '/',
       routes: {
         '/': (context) => const Diagnosis(),
-        '/location': (context) => const Location(),
+        '/search': (context) => const Search(),
       },
     ),
   );
