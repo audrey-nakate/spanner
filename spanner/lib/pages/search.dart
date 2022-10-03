@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import 'dart:io';
-=======
->>>>>>> dfe83a17c1944b2deacfe50d7ceecb4869436647
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
@@ -14,26 +10,6 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-        body: (currentPosition != null)
-            ? Column(
-                children: <Widget>[
-                  Container(
-                      height: MediaQuery.of(context).size.height / 3,
-                      width: MediaQuery.of(context).size.width,
-                      child: GoogleMap(
-                        initialCameraPosition: CameraPosition(
-                            target: LatLng(currentPosition.latitude,
-                                currentPosition.longitude),
-                            zoom: 16.0),
-                        zoomGesturesEnabled: true,
-                      ))
-                ],
-              )
-            : const Center(
-                child: CircularProgressIndicator(),
-              ));
-=======
         body: Column(
       children: <Widget>[
         SizedBox(
@@ -46,6 +22,5 @@ class Search extends StatelessWidget {
             ))
       ],
     ));
->>>>>>> dfe83a17c1944b2deacfe50d7ceecb4869436647
   }
 }
