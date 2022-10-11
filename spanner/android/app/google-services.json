@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "82378933730",
+    "project_id": "spanner-57458",
+    "storage_bucket": "spanner-57458.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82378933730:android:b5808b34ccff322874a5bb",
+        "android_client_info": {
+          "package_name": "com.example.spanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82378933730-vv5jttoreqqgv3fjiel7c0fvpnvrkig3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC65j6wbsFCvvbEM7Lpgg2CVdkr5sWeQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82378933730-vv5jttoreqqgv3fjiel7c0fvpnvrkig3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
