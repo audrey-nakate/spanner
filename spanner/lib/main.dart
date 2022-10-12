@@ -6,8 +6,11 @@ import 'package:spanner/screens/diagnosis.dart';
 import 'package:spanner/screens/search.dart';
 import 'package:spanner/services/geolocator_service.dart';
 import 'package:spanner/services/places_services.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(
     MyApp(),
   );
