@@ -188,7 +188,7 @@ class _ImageHandlerState extends State<ImageHandler> {
     var permissionStatus = await Permission.photos.status;
 
     if (permissionStatus.isGranted) {
-      final image = await _imagePicker.pickImage(source: source);
+      final image = await _imagePicker.getImage(source: source);
       if (image != null) {
         var file = File(image.path);
         final String picture =
