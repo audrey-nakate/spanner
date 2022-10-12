@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:spanner/models/place.dart';
 import 'package:spanner/screens/diagnosis.dart';
@@ -27,9 +28,19 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         FutureProvider(create: (context) => locatorService.getLocation()),
+        FutureProvider(
+          create: (context) {
+            ImageConfiguration configuration =
+                createLocalImageConfiguration(context);
+            return BitmapDescriptor.fromAssetImage(
+                configuration, 'assets/images/service.png');
+          },
+        ),
         ProxyProvider<Position, Future<List<Places>>>(
           update: (context, position, places) {
-            return;
+            return (position != null)
+                ? placesService.getPlaces(position.latitude, position.longitude)
+                : null;
           },
         )
       ],

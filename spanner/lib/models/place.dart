@@ -1,3 +1,4 @@
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:spanner/models/geometry.dart';
 
 class Places {
@@ -14,8 +15,9 @@ class Places {
       required this.rating,
       required this.vicinity});
 
-  Places.fromJson(Map<dynamic, dynamic> parsedJson)
-      : name = parsedJson["name"],
+  Places.fromJson(
+    Map<dynamic, dynamic> parsedJson,
+  )   : name = parsedJson["name"],
         rating = (parsedJson["rating"] != null)
             ? parsedJson["rating"].toDouble()
             : null,
