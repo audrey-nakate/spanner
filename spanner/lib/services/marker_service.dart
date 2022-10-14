@@ -5,7 +5,7 @@ class MarkerService {
   List<Marker> getMarkers(List<Places> places) {
     var markers = <Marker>[];
 
-    places.forEach((place) {
+    for (var place in places) {
       Marker marker = Marker(
           markerId: MarkerId(place.name),
           draggable: false,
@@ -14,7 +14,7 @@ class MarkerService {
               LatLng(place.geometry.location.lat, place.geometry.location.lng));
 
       markers.add(marker);
-    });
+    }
 
     return markers;
   }

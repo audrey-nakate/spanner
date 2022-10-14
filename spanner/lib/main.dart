@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
             ImageConfiguration configuration =
                 createLocalImageConfiguration(context);
             return BitmapDescriptor.fromAssetImage(
-                configuration, 'assets/images/service.png');
+                configuration, 'lib/assets/images/service.png');
           },
         ),
         ProxyProvider<Position, Future<List<Places>>>(
