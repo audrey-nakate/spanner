@@ -8,11 +8,13 @@ import 'package:spanner/services/geolocator_service.dart';
 import 'package:spanner/services/marker_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+//this is the layout of the map page
 class Search extends StatelessWidget {
   const Search({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //these variables help us to pass functions of services into the Search class
     final currentPosition = Provider.of<Position>(context);
     final placesProvider = Provider.of<Future<List<Places>>>(context);
     final geoService = GeoLocatorService();
@@ -21,6 +23,7 @@ class Search extends StatelessWidget {
     return FutureProvider(
       create: (context) => placesProvider,
       child: Scaffold(
+          //give each place a marker
           body: (currentPosition != null)
               ? Consumer<List<Places>>(builder: (_, places, __) {
                   var markers = (places != null)
@@ -28,6 +31,7 @@ class Search extends StatelessWidget {
                       : <Marker>[];
                   return (places != null)
                       ? Column(children: <Widget>[
+                          //adding the google map
                           Container(
                             height: MediaQuery.of(context).size.height / 3,
                             width: MediaQuery.of(context).size.width,
@@ -38,11 +42,18 @@ class Search extends StatelessWidget {
                                   zoom: 16.0),
                               zoomGesturesEnabled: true,
                               markers: Set<Marker>.of(markers),
+                              myLocationEnabled: true,
+                              zoomControlsEnabled: false,
+                              myLocationButtonEnabled: true,
+                              padding: const EdgeInsets.only(
+                                top: 210.0,
+                              ),
                             ),
                           ),
                           const SizedBox(
-                            height: 10.0,
+                            height: 5.0,
                           ),
+                          //scrollable list of nearby services
                           Expanded(
                               child: placesProvider == null
                                   ? const Center(
@@ -50,6 +61,7 @@ class Search extends StatelessWidget {
                                   : ListView.builder(
                                       itemCount: places.length,
                                       itemBuilder: (context, index) {
+                                        //provinding distance of services from user
                                         return FutureProvider(
                                           create: (context) =>
                                               geoService.getDistance(
@@ -107,6 +119,7 @@ class Search extends StatelessWidget {
                                                     },
                                                   )
                                                 ]),
+                                            //adding button to take us to directions
                                             trailing: IconButton(
                                               icon: Icon(
                                                 Icons.directions,
