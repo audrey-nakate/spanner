@@ -26,8 +26,10 @@ class _CarInfoState extends State<CarInfo> {
               decoration: const InputDecoration(
                   border: OutlineInputBorder(), hintText: 'Car Brand'),
               value: _brandSelection,
-              onChanged: (newValue) {
+              onChanged: (newValue) async {
                 setState(() {
+                  _modelSelection = null;
+                  selectedCarModels = [];
                   _brandSelection = newValue!;
                   selectedCarModels = carInfo
                       .where((c) =>
@@ -67,6 +69,7 @@ class _CarInfoState extends State<CarInfo> {
                 print(_modelSelection);
               });
             },
+            value: _modelSelection,
             items:
                 selectedCarModels.map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem(value: value, child: Text(value));
