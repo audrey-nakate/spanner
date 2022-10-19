@@ -35,6 +35,7 @@ class _DiagnosisState extends State<Diagnosis> {
                     padding: EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0),
                     child: Text('Checkout possible problems:'),
                   ),
+                  const SizedBox(height: 8.0),
                   const ProblemsDropdown(),
 
                   //Text field to describe the problems
