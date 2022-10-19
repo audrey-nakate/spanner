@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -18,7 +19,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  //MyApp({super.key});
 
   final locatorService = GeoLocatorService();
   final placesService = PlacesService();
