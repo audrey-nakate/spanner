@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -8,17 +9,18 @@ import 'package:spanner/screens/search.dart';
 import 'package:spanner/services/geolocator_service.dart';
 import 'package:spanner/services/places_services.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(
     MyApp(),
   );
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  //MyApp({super.key});
 
   final locatorService = GeoLocatorService();
   final placesService = PlacesService();
