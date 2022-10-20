@@ -32,7 +32,7 @@ class Search extends StatelessWidget {
                   return (places != null)
                       ? Column(children: <Widget>[
                           //adding the google map
-                          Container(
+                          SizedBox(
                             height: MediaQuery.of(context).size.height / 3,
                             width: MediaQuery.of(context).size.width,
                             child: GoogleMap(
@@ -45,9 +45,7 @@ class Search extends StatelessWidget {
                               myLocationEnabled: true,
                               zoomControlsEnabled: false,
                               myLocationButtonEnabled: true,
-                              padding: const EdgeInsets.only(
-                                top: 210.0,
-                              ),
+                              padding: const EdgeInsets.only(top: 210.0),
                             ),
                           ),
                           const SizedBox(

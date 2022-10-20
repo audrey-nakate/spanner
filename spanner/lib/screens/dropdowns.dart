@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'lists_and_classes.dart';
+import '../models/lists_and_classes.dart';
 
 Problem problem = Problem();
 
