@@ -25,6 +25,8 @@ class MyApp extends StatelessWidget {
   final locatorService = GeoLocatorService();
   final placesService = PlacesService();
 
+  MyApp({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
