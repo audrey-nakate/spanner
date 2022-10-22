@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:spanner/models/location.dart';
 
 class Geometry {
